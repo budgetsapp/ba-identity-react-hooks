@@ -1,7 +1,7 @@
 {
   "name": "ba-identity-react-hooks",
   "version": "1.0.0",
-  "description": "React ba-identity useCurrentUser, useIdentity, useBAAuthClient hooks",
+  "description": "React ba-identity useCurrentUser, useIdentity, useBaIdentityClient hooks",
   "main": "dist/ba-identity-react-hooks.js",
   "scripts": {
     "start": "webpack --watch --config ./config/webpack.config.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/budgetsapp/ba-auth-react-hooks.git"
+    "url": "git+https://github.com/budgetsapp/ba-identity-react-hooks.git"
   },
   "keywords": [
     "identity",
@@ -22,20 +22,22 @@
   "author": "vadimkorr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/budgetsapp/ba-auth-react-hooks/issues"
+    "url": "https://github.com/budgetsapp/ba-identity-react-hooks/issues"
   },
-  "homepage": "https://github.com/budgetsapp/ba-auth-react-hooks#readme",
+  "homepage": "https://github.com/budgetsapp/ba-identity-react-hooks#readme",
   "peerDependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "ba-auth-client-js": "budgetsapp/ba-auth-client-js"
+    "react-dom": "^16.12.0"
   },
   "dependencies": {},
   "devDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "@babel/core": "^7.8.4",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
     "babel-core": "^6.26.3",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",

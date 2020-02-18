@@ -11,6 +11,7 @@ module.exports = {
     path: BUILD_DIR,
     libraryTarget: 'umd',
     library: 'ba-identity-react-hooks',
+    globalObject: 'this',
   },
   module: {
     rules: [
@@ -28,4 +29,19 @@ module.exports = {
     ],
   },
   plugins: [new CleanWebpackPlugin()],
+  externals: {
+    // Don't bundle react or react-dom
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'ReactDOM',
+      root: 'ReactDOM',
+    },
+  },
 };
