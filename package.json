@@ -7,7 +7,7 @@
     "start": "webpack --watch --config ./config/webpack.config.js",
     "build": "webpack --config ./config/webpack.config.js",
     "test": "jest",
-    "postinstall": "echo Building ba-identity-react-hooks... && npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
