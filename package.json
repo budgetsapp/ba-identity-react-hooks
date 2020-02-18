@@ -1,0 +1,43 @@
+{
+  "name": "ba-identity-react-hooks",
+  "version": "1.0.0",
+  "description": "React ba-identity useCurrentUser, useAuth, useBAAuthClient hooks",
+  "main": "dist/ba-identity-react-hooks.js",
+  "scripts": {
+    "start": "webpack --watch --config ./config/webpack.config.js",
+    "build": "webpack --config ./config/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "echo Building ba-identity-react-hooks... && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budgetsapp/ba-auth-react-hooks.git"
+  },
+  "keywords": [
+    "identity",
+    "auth",
+    "react",
+    "hooks"
+  ],
+  "author": "vadimkorr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/budgetsapp/ba-auth-react-hooks/issues"
+  },
+  "homepage": "https://github.com/budgetsapp/ba-auth-react-hooks#readme",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
