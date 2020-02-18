@@ -1,3 +1,4 @@
-import { Button } from './src/Button';
+import { BaIdentityProvider } from './src/BaIdentityProvider';
+import { useIdentity, useCurrentUser, useBaIdentityClient } from './src/hooks';
 
-export { Button };
+export { BaIdentityProvider, useIdentity, useCurrentUser, useBaIdentityClient };
