@@ -1,14 +1,14 @@
 module.exports = {
-  "extends": "plugin:prettier/recommended",
+  extends: 'plugin:prettier/recommended',
 
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "rules": {
-    "semi": "error"
-  }
+  rules: {
+    semi: 'error',
+  },
 };

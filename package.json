@@ -2,12 +2,13 @@
   "name": "ba-identity-react-hooks",
   "version": "1.0.0",
   "description": "React ba-identity useCurrentUser, useIdentity, useBaIdentityClient hooks",
-  "main": "./dist/ba-identity-react-hooks.js",
+  "main": "./lib/dist/ba-identity-react-hooks.js",
   "scripts": {
-    "start": "webpack --watch --config ./config/webpack.config.js",
-    "build": "webpack --config ./config/webpack.config.js",
-    "test": "jest",
-    "prepare": "install-peers"
+    "start": "webpack --watch --config ./lib/config/webpack.config.js",
+    "install-app": "cd ./app && yarn",
+    "build": "webpack --config ./lib/config/webpack.config.js",
+    "postinstall": "echo Building ba-identity-react-hooks... && npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -41,10 +42,8 @@
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "install-peers-cli": "^2.2.0",
     "jest": "^25.1.0",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-cli": "^3.3.11"
   }
 }
