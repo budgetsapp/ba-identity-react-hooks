@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 const BUILD_DIR = path.resolve(__dirname, '../dist');
 
@@ -11,7 +12,6 @@ module.exports = {
     path: BUILD_DIR,
     libraryTarget: 'umd',
     library: 'ba-identity-react-hooks',
-    globalObject: 'this',
   },
   module: {
     rules: [
@@ -29,19 +29,11 @@ module.exports = {
     ],
   },
   plugins: [new CleanWebpackPlugin()],
-  externals: {
-    // Don't bundle react or react-dom
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
-      root: 'React',
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'ReactDOM',
-      root: 'ReactDOM',
+  externals: [nodeExternals()],
+  // https://stackoverflow.com/questions/33157904/how-to-avoid-loaded-two-copies-of-react-error-when-developing-an-external-comp
+  resolve: {
+    alias: {
+      react: path.resolve('../node_modules/react'),
     },
   },
 };
