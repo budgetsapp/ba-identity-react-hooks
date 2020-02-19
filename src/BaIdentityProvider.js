@@ -22,6 +22,7 @@ export function BaIdentityProvider({ client, children }) {
     setUser(currentUser);
   });
 
+  /** Called auto refresh on mount to renew API calls even after page refresh */
   useEffect(() => {
     client.autoUpdateToken(true);
   }, [client]);
