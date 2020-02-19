@@ -1,10 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, '../../../../dist');
+const BUILD_DIR = path.resolve(__dirname, '../dist');
 
 module.exports = {
-  entry: './app/src/lib/index.js', // relative to root
+  entry: './src/index.js', // relative to root
   mode: 'production', // mode: 'development',
   output: {
     filename: 'ba-identity-react-hooks.js',
@@ -47,9 +47,10 @@ module.exports = {
   // not a good approach, better to build the bundle and provide as ready-to-use
   // also yarn not execute posinstall : https://github.com/yarnpkg/yarn/issues/5476
 
-  resolve: {
-    alias: {
-      react: '../../../node_modules/react',
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     react: '../app/node_modules/react',
+  //     'ba-auth-api-client': '../app/node_modules/ba-auth-api-client',
+  //   },
+  // },
 };

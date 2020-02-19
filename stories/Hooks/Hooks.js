@@ -1,9 +1,7 @@
 import React from 'react';
-import './App.css';
+import { useBaIdentityClient, useCurrentUser, useIdentity } from '../../src';
 
-import { useBaIdentityClient, useCurrentUser, useIdentity } from './lib';
-
-localStorage.setItem('debug', 'Auth-API');
+import './Hooks.css';
 
 function buildLog(func) {
   return function(status, e) {
@@ -14,7 +12,7 @@ function buildLog(func) {
   };
 }
 
-function App() {
+export function Hooks() {
   const {
     autoUpdateToken,
     getIsAuthenticated,
@@ -64,5 +62,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
