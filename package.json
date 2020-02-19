@@ -2,12 +2,11 @@
   "name": "ba-identity-react-hooks",
   "version": "1.0.0",
   "description": "React ba-identity useCurrentUser, useIdentity, useBaIdentityClient hooks",
-  "main": "./lib/dist/ba-identity-react-hooks.js",
+  "main": "./dist/ba-identity-react-hooks.js",
   "scripts": {
-    "start": "webpack --watch --config ./lib/config/webpack.config.js",
+    "start": "webpack --watch --config ./app/src/lib/config/webpack.config.js",
     "install-app": "cd ./app && yarn",
-    "build": "webpack --config ./lib/config/webpack.config.js",
-    "postinstall": "echo Building ba-identity-react-hooks... && npm run build",
+    "build": "webpack --config ./app/src/lib/config/webpack.config.js",
     "test": "jest"
   },
   "repository": {

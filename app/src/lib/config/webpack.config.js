@@ -1,11 +1,10 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
 
-const BUILD_DIR = path.resolve(__dirname, '../dist');
+const BUILD_DIR = path.resolve(__dirname, '../../../../dist');
 
 module.exports = {
-  entry: './lib/index.js', // relative to root
+  entry: './app/src/lib/index.js', // relative to root
   mode: 'production', // mode: 'development',
   output: {
     filename: 'ba-identity-react-hooks.js',
@@ -50,7 +49,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      react: '../../app/node_modules/react',
+      react: '../../../node_modules/react',
     },
   },
 };
