@@ -22,13 +22,17 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-react', '@babel/preset-env'],
-            plugins: ['@babel/transform-runtime'],
+            plugins: [
+              '@babel/transform-runtime',
+              '@babel/plugin-proposal-class-properties',
+            ],
           },
         },
       },
     ],
   },
   plugins: [new CleanWebpackPlugin()],
+
   externals: [nodeExternals()],
   // https://stackoverflow.com/questions/33157904/how-to-avoid-loaded-two-copies-of-react-error-when-developing-an-external-comp
   resolve: {

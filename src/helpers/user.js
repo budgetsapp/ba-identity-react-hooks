@@ -1,3 +1,5 @@
+import { DefaultUser } from '../consts/user';
+
 export function buildUser(displayName) {
   return {
     displayName,
@@ -9,5 +11,5 @@ export function buildCurrentUser(data) {
 }
 
 export function buildDefaultUser() {
-  return buildUser('User');
+  return buildUser(DefaultUser.displayName);
 }
