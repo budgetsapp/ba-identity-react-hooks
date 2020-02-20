@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AuthClientContext } from './context';
+import { BaIdentityClientContext } from './context';
 
 export function useIdentity() {
   const {
@@ -8,7 +8,7 @@ export function useIdentity() {
     autoUpdateToken,
     getIsAuthenticated,
     getIsRefreshTokenExpired,
-  } = useContext(AuthClientContext);
+  } = useContext(BaIdentityClientContext);
   return {
     login,
     logout,
@@ -19,7 +19,7 @@ export function useIdentity() {
 }
 
 export function useCurrentUser() {
-  const { user } = useContext(AuthClientContext);
+  const { user } = useContext(BaIdentityClientContext);
   return user;
 }
 

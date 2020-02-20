@@ -2,7 +2,7 @@
   "name": "ba-identity-react-hooks",
   "version": "1.0.0",
   "description": "React ba-identity useCurrentUser, useIdentity, useBaIdentityClient hooks",
-  "main": "./dist/ba-identity-react-hooks.js",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "webpack --watch --config ./config/webpack.config.js",
     "build": "webpack --config ./config/webpack.config.js",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/budgetsapp/ba-identity-react-hooks#readme",
   "peerDependencies": {
-    "ba-auth-api-client": "budgetsapp/ba-auth-client-js#0794375",
+    "ba-identity-client-js": "budgetsapp/ba-identity-client-js#5c532ab",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

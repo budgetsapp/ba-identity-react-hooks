@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { AuthClientContext } from './context';
+import { BaIdentityClientContext } from './context';
 import { buildDefaultUser, buildCurrentUser } from './helpers/user';
 
 export function BaIdentityProvider({ client, children }) {
@@ -55,8 +55,8 @@ export function BaIdentityProvider({ client, children }) {
   };
 
   return (
-    <AuthClientContext.Provider value={value}>
+    <BaIdentityClientContext.Provider value={value}>
       {children}
-    </AuthClientContext.Provider>
+    </BaIdentityClientContext.Provider>
   );
 }

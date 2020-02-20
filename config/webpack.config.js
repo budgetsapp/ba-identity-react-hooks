@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js', // relative to root
   mode: 'production', // mode: 'development',
   output: {
-    filename: 'ba-identity-react-hooks.js',
+    filename: 'index.js',
     path: BUILD_DIR,
     libraryTarget: 'umd',
     library: 'ba-identity-react-hooks',
@@ -50,7 +50,7 @@ module.exports = {
   // resolve: {
   //   alias: {
   //     react: '../app/node_modules/react',
-  //     'ba-auth-api-client': '../app/node_modules/ba-auth-api-client',
+  //     'ba-identity-client-js': '../app/node_modules/ba-identity-client-js',
   //   },
   // },
 };
