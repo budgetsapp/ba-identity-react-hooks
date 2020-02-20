@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/budgetsapp/ba-identity-react-hooks#readme",
   "peerDependencies": {
-    "ba-identity-client-js": "budgetsapp/ba-identity-client-js#5c532ab",
+    "ba-identity-client-js": "budgetsapp/ba-identity-client-js#MVPv2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
